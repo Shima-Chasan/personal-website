@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>shima_chasan - AI活用で仕事と日常を楽しく</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#FF9E9E',
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    .hamburger {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      position: relative;
+      z-index: 50;
+    }
+    .hamburger span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #333;
+      position: absolute;
+      transition: all 0.3s;
+    }
+    .hamburger span:nth-child(1) { top: 4px; }
+    .hamburger span:nth-child(2) { top: 11px; }
+    .hamburger span:nth-child(3) { bottom: 4px; }
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg);
+      top: 11px;
+    }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg);
+      bottom: 11px;
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+  <!-- Header -->
+  <header class="fixed w-full bg-white shadow-sm z-40">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold">shima_chasan</a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-8">
+          <li><a href="#about" class="hover:text-accent transition">About</a></li>
+          <li><a href="#service" class="hover:text-accent transition">Service</a></li>
+          <li><a href="#projects" class="hover:text-accent transition">Projects</a></li>
+          <li><a href="#contact" class="hover:text-accent transition">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-menu hidden md:hidden bg-white w-full px-4 pb-4">
+        <ul class="space-y-4">
+          <li><a href="#about" class="block py-2 hover:text-accent transition">About</a></li>
+          <li><a href="#service" class="block py-2 hover:text-accent transition">Service</a></li>
+          <li><a href="#projects" class="block py-2 hover:text-accent transition">Projects</a></li>
+          <li><a href="#contact" class="block py-2 hover:text-accent transition">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4">
+      <div class="container mx-auto flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            AIで時間も笑顔も増やそう
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            元公務員ママが教える『仕事と日常で使えるAI活用術』
+          </p>
+          <a href="#contact" class="bg-accent text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition inline-block">
+            お問い合わせ
+          </a>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-accent">
+            <img src="https://placehold.co/400x400/FF9E9E/FFFFFF?text=AI" alt="プロフィール画像" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-12 text-center">About</h2>
+        <div class="max-w-3xl mx-auto">
+          <ul class="space-y-4 text-lg">
+            <li class="flex items-start">
+              <span class="mr-3">🧑‍💼</span>
+              <span>元公務員のフリーランスママ</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-3">🛠</span>
+              <span>仕事や日常で使える AI 活用術を発信</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-3">🎥</span>
+              <span>YouTube でも解説動画などを公開中</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-3">😊</span>
+              <span>AI や時短ツールでたくさんの人を笑顔にしたい！</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Section -->
+    <section id="service" class="py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-12 text-center">Service</h2>
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <!-- Service Card 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition">
+            <div class="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+              <i class="fas fa-robot text-2xl text-accent"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">AI活用コンサルティング</h3>
+            <p class="text-gray-600">ChatGPT&amp;・自動化の導入支援</p>
+          </div>
+          
+          <!-- Service Card 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition">
+            <div class="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+              <i class="fas fa-laptop-code text-2xl text-accent"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">業務効率化アプリ開発</h3>
+            <p class="text-gray-600">AppSheet/ノーコードで業務アプリ作成</p>
+          </div>
+          
+          <!-- Service Card 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition">
+            <div class="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+              <i class="fas fa-hashtag text-2xl text-accent"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">SNS運用 & コンテンツ制作</h3>
+            <p class="text-gray-600">Instagram / YouTube / X の伴走支援</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-12 text-center">Projects</h2>
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <!-- Project 1 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-1 transition">
+            <img src="https://picsum.photos/seed/1/600/400" alt="プロジェクト1" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">YouTubeチャンネル</h3>
+              <p class="text-gray-600">AI活用術や業務効率化のヒントを発信しています。</p>
+            </div>
+          </div>
+          
+          <!-- Project 2 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-1 transition">
+            <img src="https://picsum.photos/seed/2/600/400" alt="プロジェクト2" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Udemy講座</h3>
+              <p class="text-gray-600">初心者向けのAI活用講座を開講中です。</p>
+            </div>
+          </div>
+          
+          <!-- Project 3 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-1 transition">
+            <img src="https://picsum.photos/seed/3/600/400" alt="プロジェクト3" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">レンタルスペースDX</h3>
+              <p class="text-gray-600">業務効率化の導入事例をご紹介します。</p>
+            </div>
+          </div>
+          
+          <!-- Project 4 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-1 transition">
+            <img src="https://picsum.photos/seed/4/600/400" alt="プロジェクト4" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">AI活用セミナー</h3>
+              <p class="text-gray-600">定期的に初心者向けセミナーを開催中です。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-12 text-center">Contact</h2>
+        <div class="max-w-2xl mx-auto">
+          <form action="#" class="space-y-6">
+            <div>
+              <label for="name" class="block text-gray-700 mb-2">お名前</label>
+              <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent" required>
+            </div>
+            <div>
+              <label for="email" class="block text-gray-700 mb-2">メールアドレス</label>
+              <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent" required>
+            </div>
+            <div>
+              <label for="message" class="block text-gray-700 mb-2">メッセージ</label>
+              <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent" required></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="bg-accent text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition">
+                送信する
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-50 py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-center space-x-6 mb-8">
+        <a href="#" class="text-gray-600 hover:text-accent transition" aria-label="YouTube">
+          <i class="fab fa-youtube text-2xl"></i>
+        </a>
+        <a href="#" class="text-gray-600 hover:text-accent transition" aria-label="Instagram">
+          <i class="fab fa-instagram text-2xl"></i>
+        </a>
+        <a href="#" class="text-gray-600 hover:text-accent transition" aria-label="Twitter">
+          <i class="fab fa-twitter text-2xl"></i>
+        </a>
+        <a href="#" class="text-gray-600 hover:text-accent transition" aria-label="Note">
+          <i class="fas fa-book text-2xl"></i>
+        </a>
+      </div>
+      <div class="text-center text-gray-500">
+        <p>© 2025 shima_chasan</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('hidden');
+      document.body.style.overflow = mobileMenu.classList.contains('hidden') ? 'auto' : 'hidden';
+    });
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      });
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80, // Adjust for fixed header
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
