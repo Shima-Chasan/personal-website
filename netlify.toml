@@ -5,7 +5,16 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# Handle SPA routing (except for /admin)
 [[redirects]]
   from = "/*"
   to = "/index.html"
+  status = 200
+  force = false
+  conditions = {Path = ["!/admin/*"]}
+
+# Serve the admin page
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
   status = 200
