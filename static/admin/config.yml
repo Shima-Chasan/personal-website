@@ -3,6 +3,11 @@ backend:
   repo: Shima-Chasan/personal-website
   branch: main
 
+# 管理画面の設定
+local_backend: true
+logo_url: "https://raw.githubusercontent.com/Shima-Chasan/personal-website/main/images/chasan-icon.png"
+
+# メディアファイルの設定
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
