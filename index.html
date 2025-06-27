@@ -15,6 +15,25 @@
           },
         },
       },
+      plugins: [
+        function({ addComponents }) {
+          addComponents({
+            '.aspect-w-4': {
+              position: 'relative',
+              paddingBottom: '75%', /* 4:3 Aspect Ratio */
+            },
+            '.aspect-h-3': {
+              position: 'absolute',
+              height: '100%',
+              width: '100%',
+              top: '0',
+              left: '0',
+              right: '0',
+              bottom: '0',
+            }
+          })
+        }
+      ]
     }
   </script>
   <style>
@@ -60,6 +79,7 @@
           <li><a href="#service" class="hover:text-accent transition">Service</a></li>
           <li><a href="#projects" class="hover:text-accent transition">Projects</a></li>
           <li><a href="#news" class="hover:text-accent transition">News</a></li>
+          <li><a href="#availability" class="hover:text-accent transition">空き状況</a></li>
           <li><a href="#contact" class="hover:text-accent transition">Contact</a></li>
         </ul>
       </nav>
@@ -80,6 +100,7 @@
           <li><a href="#service" class="block py-2 hover:text-accent transition">Service</a></li>
           <li><a href="#projects" class="block py-2 hover:text-accent transition">Projects</a></li>
           <li><a href="#news" class="block py-2 hover:text-accent transition">News</a></li>
+          <li><a href="#availability" class="block py-2 hover:text-accent transition">空き状況</a></li>
           <li><a href="#contact" class="block py-2 hover:text-accent transition">Contact</a></li>
         </ul>
       </div>
@@ -287,6 +308,23 @@
               <div id="news-modal-content" class="mt-4">
                 <!-- モーダルコンテンツがここに入ります -->
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Availability Section -->
+    <section id="availability" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-12 text-center">空き状況</h2>
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <p class="text-gray-600 mb-6 text-center">
+              下記カレンダーで空き状況をご確認いただけます。白色の時間帯が空き状況となります。
+            </p>
+            <div class="calendar-container aspect-w-4 aspect-h-3 overflow-hidden rounded-lg">
+              <iframe src="https://calendar.google.com/calendar/embed?src=chi.04fep%40gmail.com&ctz=Asia%2FTokyo&mode=WEEK&showTitle=0&showNav=1&showPrint=0&showTabs=1&showCalendars=0" style="border: 0" frameborder="0" scrolling="no" class="w-full h-full absolute inset-0"></iframe>
             </div>
           </div>
         </div>
