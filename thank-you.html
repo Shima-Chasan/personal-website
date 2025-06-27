@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>お問い合わせありがとうございます | 島村千春</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -19,83 +17,28 @@
     }
   </script>
 </head>
-<body class="font-sans text-gray-800 bg-gray-50">
-  <!-- Header -->
-  <header class="bg-white shadow-sm sticky top-0 z-10">
-    <div class="container mx-auto px-4">
-      <div class="flex justify-between items-center py-4">
-        <a href="/" class="text-2xl font-bold text-gray-800">島村千春</a>
-        <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-        <nav class="hidden md:flex space-x-8">
-          <a href="/" class="text-gray-600 hover:text-accent transition">ホーム</a>
-          <a href="/#about" class="text-gray-600 hover:text-accent transition">プロフィール</a>
-          <a href="/#services" class="text-gray-600 hover:text-accent transition">サービス</a>
-          <a href="/#news" class="text-gray-600 hover:text-accent transition">ニュース</a>
-          <a href="/#contact" class="text-gray-600 hover:text-accent transition">お問い合わせ</a>
-        </nav>
+<body class="font-sans text-gray-800 bg-gray-50 flex items-center justify-center min-h-screen">
+  <div class="max-w-md w-full mx-auto bg-white rounded-lg shadow-md p-8">
+    <div class="text-center">
+      <div class="mb-6 text-accent">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
       </div>
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="md:hidden hidden py-4">
-        <nav class="flex flex-col space-y-4">
-          <a href="/" class="text-gray-600 hover:text-accent transition">ホーム</a>
-          <a href="/#about" class="text-gray-600 hover:text-accent transition">プロフィール</a>
-          <a href="/#services" class="text-gray-600 hover:text-accent transition">サービス</a>
-          <a href="/#news" class="text-gray-600 hover:text-accent transition">ニュース</a>
-          <a href="/#contact" class="text-gray-600 hover:text-accent transition">お問い合わせ</a>
-        </nav>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <!-- Thank You Section -->
-    <section class="py-20">
-      <div class="container mx-auto px-4">
-        <div class="max-w-2xl mx-auto text-center">
-          <div class="mb-8 text-accent">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <h1 class="text-3xl md:text-4xl font-bold mb-4">お問い合わせありがとうございます</h1>
-          <p class="text-lg text-gray-600 mb-8">
-            メッセージを受け付けました。内容を確認次第、できるだけ早くご返信いたします。
-          </p>
-          <a href="/" class="inline-flex items-center bg-accent text-white px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
-            </svg>
-            ホームに戻る
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-gray-50 py-12">
-    <div class="container mx-auto px-4">
-      <div class="flex justify-center space-x-6 mb-8">
-        <a href="#" class="text-gray-600 hover:text-accent transition" aria-label="YouTube">
-          <i class="fab fa-youtube text-2xl"></i>
-        </a>
-        <a href="#" class="text-gray-600 hover:text-accent transition" aria-label="Twitter">
-          <i class="fab fa-twitter text-2xl"></i>
-        </a>
-        <a href="#" class="text-gray-600 hover:text-accent transition" aria-label="Instagram">
-          <i class="fab fa-instagram text-2xl"></i>
-        </a>
-      </div>
-      <p class="text-center text-gray-600">
+      <h1 class="text-2xl md:text-3xl font-bold mb-4">お問い合わせありがとうございます</h1>
+      <p class="text-md text-gray-600 mb-8">
+        メッセージを受け付けました。内容を確認次第、できるだけ早くご返信いたします。
+      </p>
+      <a href="/" class="inline-flex items-center bg-accent text-white px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+        </svg>
+        ホームに戻る
+      </a>
+      <p class="text-xs text-gray-500 mt-8">
         &copy; 2025 島村千春. All rights reserved.
       </p>
     </div>
-  </footer>
-
-  <script src="script.js"></script>
+  </div>
 </body>
 </html>
