@@ -5,6 +5,18 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# フォーム通知設定
+[forms]
+  [forms.contact]
+    name = "contact"
+    [forms.contact.fields]
+      [forms.contact.fields.name]
+        required = true
+      [forms.contact.fields.email]
+        required = true
+      [forms.contact.fields.message]
+        required = true
+
 # Handle SPA routing (except for /admin)
 [[redirects]]
   from = "/*"
