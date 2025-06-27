@@ -265,12 +265,29 @@
           </div>
           
           <div class="text-center mt-10">
-            <a href="#" class="inline-flex items-center text-accent hover:underline">
+            <a href="#" id="view-more-news" class="inline-flex items-center text-accent hover:underline">
               過去のニュースを見る
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
               </svg>
             </a>
+          </div>
+          
+          <!-- ニュース記事モーダル -->
+          <div id="news-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center overflow-auto py-10">
+            <div class="bg-white rounded-lg max-w-3xl w-full mx-4 p-6 max-h-[90vh] overflow-y-auto">
+              <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold">ニュース詳細</h2>
+                <button id="news-modal-close" class="text-gray-500 hover:text-gray-700">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <div id="news-modal-content" class="mt-4">
+                <!-- モーダルコンテンツがここに入ります -->
+              </div>
+            </div>
           </div>
         </div>
       </div>
