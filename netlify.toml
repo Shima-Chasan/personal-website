@@ -17,13 +17,19 @@
       [forms.contact.fields.message]
         required = true
 
-# Handle SPA routing (except for /admin)
+# Handle thank-you page
+[[redirects]]
+  from = "/thank-you"
+  to = "/thank-you.html"
+  status = 200
+
+# Handle SPA routing (except for /admin and /thank-you)
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
   force = false
-  conditions = {Path = ["!/admin/*"]}
+  conditions = {Path = ["!/admin/*", "!/thank-you"]}
 
 # Serve the admin page
 [[redirects]]
