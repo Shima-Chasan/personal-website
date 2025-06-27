@@ -18,3 +18,10 @@
   from = "/admin/*"
   to = "/admin/index.html"
   status = 200
+
+# Ensure admin files are served with correct content-type
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-From = "netlify-headers"
+    Cache-Control = "no-cache"
