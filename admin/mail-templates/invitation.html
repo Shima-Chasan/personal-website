@@ -1,0 +1,10 @@
+---
+templateEngineOverride: false
+---
+<h2>招待されました</h2>。
+
+<p>
+ {{ .SiteURL }} のユーザー作成に招待されました。招待を承認するには、
+ こちらのリンクを押してください：
+</p>
+<p><a href="{{ .SiteURL }}/admin/#invite_token={{ .Token }}">招待を受け入れる</a></p>
