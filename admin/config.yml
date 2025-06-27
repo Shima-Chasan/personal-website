@@ -2,11 +2,11 @@ backend:
   name: git-gateway
   branch: main
   commit_messages:
-    create: "Create {{collection}} "{{slug}}""
-    update: "Update {{collection}} "{{slug}}""
-    delete: "Delete {{collection}} "{{slug}}""
-    uploadMedia: "Upload "{{path}}""
-    deleteMedia: "Delete "{{path}}""
+    create: 'Create {{collection}} "{{slug}}"'
+    update: 'Update {{collection}} "{{slug}}"'
+    delete: 'Delete {{collection}} "{{slug}}"'
+    uploadMedia: 'Upload "{{path}}"'
+    deleteMedia: 'Delete "{{path}}"'
 
 # 管理画面の設定
 local_backend: true
